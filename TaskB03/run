@@ -1,0 +1,89 @@
+#!/usr/bin/python2
+
+import re,sys
+
+def checkauto(linia):
+    pattern = r'^([0-9]+\s{1}[0-9]+\s{1}\w{1}\s?[0-9]*[\.]?[0-9]*)$'
+    match = re.search(pattern,linia)
+    if match:
+        return 1
+    else:
+        return 0
+
+def checkfstate(linia):
+    pattern = r'^([0-9]+)$'
+    match = re.search(pattern,linia)
+    if match:
+        fstates.append(int(linia))
+
+def arg():
+    arg = open(sys.argv[1])
+    for line in arg:
+        accept=0
+        state=0
+        move=0
+        line=str(line)
+        line=line.strip("\n")
+        for i in line:       
+            i=str(i)
+            if i in states:
+                pass                
+            else:
+                accept=0
+                break
+
+            if i in statemoves:
+                move=move+1
+                if move in fstates:
+                    accept=accept+1
+                else:
+                    accept=0
+            else:                        
+                if states[i]>state:
+                    state=int(states[i])
+                elif states[i]==state:
+                    pass
+                else:
+                    accept=0
+                    break
+
+            if state in fstates:
+                accept=accept+1
+
+        if accept==1:
+            print ("YES %s" % (line))
+        else:
+            print ("NO %s" % (line))
+
+    
+states = {}
+fstates = []
+statemoves={}
+
+arg2=open(sys.argv[2])
+for line in arg2:
+    checkfstate(line)
+    if 1==checkauto(line):
+        line=line.strip("\n")
+        auto_tab=line.split(" ")
+        print auto_tab[2]
+        auto_tab[2]={auto_tab[0],auto_tab[1]}
+        print auto_tab[2]
+    else:
+        pass
+
+#print states
+#print fstates
+#print statemoves
+
+#arg()
+
+
+
+
+
+
+
+    
+    
+

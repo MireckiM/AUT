@@ -1,0 +1,174 @@
+allChars = Optimize[
+  "[1]" |   "[2]" |   "[3]" |   "[4]" |   "[5]" |   "[6]" |   "[7]" |   "[8]" |   "[9]" |  "[10]" |
+ "[11]" |  "[12]" |  "[13]" |  "[14]" |  "[15]" |  "[16]" |  "[17]" |  "[18]" |  "[19]" |  "[20]" |
+ "[21]" |  "[22]" |  "[23]" |  "[24]" |  "[25]" |  "[26]" |  "[27]" |  "[28]" |  "[29]" |  "[30]" |
+ "[31]" |  "[32]" |  "[33]" |  "[34]" |  "[35]" |  "[36]" |  "[37]" |  "[38]" |  "[39]" |  "[40]" |
+ "[41]" |  "[42]" |  "[43]" |  "[44]" |  "[45]" |  "[46]" |  "[47]" |  "[48]" |  "[49]" |  "[50]" |
+ "[51]" |  "[52]" |  "[53]" |  "[54]" |  "[55]" |  "[56]" |  "[57]" |  "[58]" |  "[59]" |  "[60]" |
+ "[61]" |  "[62]" |  "[63]" |  "[64]" |  "[65]" |  "[66]" |  "[67]" |  "[68]" |  "[69]" |  "[70]" |
+ "[71]" |  "[72]" |  "[73]" |  "[74]" |  "[75]" |  "[76]" |  "[77]" |  "[78]" |  "[79]" |  "[80]" |
+ "[81]" |  "[82]" |  "[83]" |  "[84]" |  "[85]" |  "[86]" |  "[87]" |  "[88]" |  "[89]" |  "[90]" |
+ "[91]" |  "[92]" |  "[93]" |  "[94]" |  "[95]" |  "[96]" |  "[97]" |  "[98]" |  "[99]" | "[100]" |
+"[101]" | "[102]" | "[103]" | "[104]" | "[105]" | "[106]" | "[107]" | "[108]" | "[109]" | "[110]" |
+"[111]" | "[112]" | "[113]" | "[114]" | "[115]" | "[116]" | "[117]" | "[118]" | "[119]" | "[120]" |
+"[121]" | "[122]" | "[123]" | "[124]" | "[125]" | "[126]" | "[127]" | "[128]" | "[129]" | "[130]" |
+"[131]" | "[132]" | "[133]" | "[134]" | "[135]" | "[136]" | "[137]" | "[138]" | "[139]" | "[140]" |
+"[141]" | "[142]" | "[143]" | "[144]" | "[145]" | "[146]" | "[147]" | "[148]" | "[149]" | "[150]" |
+"[151]" | "[152]" | "[153]" | "[154]" | "[155]" | "[156]" | "[157]" | "[158]" | "[159]" | "[160]" |
+"[161]" | "[162]" | "[163]" | "[164]" | "[165]" | "[166]" | "[167]" | "[168]" | "[169]" | "[170]" |
+"[171]" | "[172]" | "[173]" | "[174]" | "[175]" | "[176]" | "[177]" | "[178]" | "[179]" | "[180]" |
+"[181]" | "[182]" | "[183]" | "[184]" | "[185]" | "[186]" | "[187]" | "[188]" | "[189]" | "[190]" |
+"[191]" | "[192]" | "[193]" | "[194]" | "[195]" | "[196]" | "[197]" | "[198]" | "[199]" | "[200]" |
+"[201]" | "[202]" | "[203]" | "[204]" | "[205]" | "[206]" | "[207]" | "[208]" | "[209]" | "[210]" |
+"[211]" | "[212]" | "[213]" | "[214]" | "[215]" | "[216]" | "[217]" | "[218]" | "[219]" | "[220]" |
+"[221]" | "[222]" | "[223]" | "[224]" | "[225]" | "[226]" | "[227]" | "[228]" | "[229]" | "[230]" |
+"[231]" | "[232]" | "[233]" | "[234]" | "[235]" | "[236]" | "[237]" | "[238]" | "[239]" | "[240]" |
+"[241]" | "[242]" | "[243]" | "[244]" | "[245]" | "[246]" | "[247]" | "[248]" | "[249]" | "[250]" |
+"[251]" | "[252]" | "[253]" | "[254]" | "[255]"
+];
+ 
+minus = ("-" : "minus ") | ("" : "");
+spacja = "" : " ";
+zero  = "0" : "zero";
+delzero = "0" : "";
+delprzecinek = "," : "";
+i = ("," : " i ");
+ 
+jednosci =   ("1" : "jeden")
+    | ("2" : "dwa")
+    | ("3" : "trzy")
+    | ("4" : "cztery")
+    | ("5" : "pięć")
+    | ("6" : "sześć")
+    | ("7" : "siedem")
+    | ("8" : "osiem")
+    | ("9" : "dziewięć")
+;
+ 
+nascie =   ("10" : "dziesięć")
+    | ("11" : "jedenaście")
+    | ("12" : "dwanaście")
+    | ("13" : "trzynaście")
+    | ("14" : "czternaście")
+    | ("15" : "piętnaście")
+    | ("16" : "szesnaście")
+    | ("17" : "siedemnaście")
+    | ("18" : "osiemnaście")
+    | ("19" : "dziewiętnaście")
+;
+ 
+dziesiatki =   ("2" : "dwadzieścia")
+      | ("3" : "trzydzieści")
+      | ("4" : "czterdzieści")
+      | ("5" : "pięćdzisiąt")
+      | ("6" : "sześćdziesiąt")
+      | ("7" : "siedemdziesiąt")
+      | ("8" : "osiemdziesiąt")
+      | ("9" : "dziewięćdziesiąt")
+;
+ 
+setki =   ("1": "sto")
+      | ("2" : "dwieście")
+      | ("3" : "trzysta")
+      | ("4" : "czterysta")
+      | ("5" : "pięćset")
+      | ("6" : "sześćset")
+      | ("7" : "siedemset")
+      | ("8" : "osiemset")
+      | ("9" : "dziewięćset")
+;
+ 
+liczby_20_do_99 = dziesiatki delzero | dziesiatki spacja jednosci;
+ 
+liczby_1_do_99 = jednosci | nascie | liczby_20_do_99;
+ 
+liczby_100_do_999 =
+  setki delzero delzero |
+  setki delzero spacja jednosci |
+  setki spacja nascie |
+  setki spacja liczby_20_do_99
+;
+ 
+liczby_all = liczby_1_do_99 | liczby_100_do_999;
+ 
+ 
+ 
+dziesiatych = "" : " dziesiątych";
+setnych = "" : " setnych";
+tysiecznych = "" : " tysięcznych";
+ 
+jedna_dziesiata = "1" : "jedna dziesiąta";
+jedna_setna = "1" : "jedna setna";
+jedna_tysieczna = "1" : "jedna tysięczna";
+ 
+suffix_dziesietne = ("2" : "dwie dziesiąte")
+    | ("3" : "trzy dziesiąte")
+    | ("4" : "cztery dziesiąte")
+    | ("5" : "pięć dziesiątych")
+    | ("6" : "sześć dziesiątych")
+    | ("7" : "siedem dziesiątych")
+    | ("8" : "osiem dziesiątych")
+    | ("9" : "dziewięć dziesiątych")
+;
+ 
+suffix_setne = ("1" : "jeden setnych")
+    | ("3" : "dwie setne")
+    | ("3" : "trzy setne")
+    | ("4" : "cztery setne")
+    | ("5" : "pięć setnych")
+    | ("6" : "sześć setnych")
+    | ("7" : "siedem setnych")
+    | ("8" : "osiem setnych")
+    | ("9" : "dziewięć setnych")
+;
+ 
+suffix_tysieczne = ("1" : "jeden tysięcznych")
+    | ("3" : "dwie tysięczne")
+    | ("3" : "trzy tysięczne")
+    | ("4" : "cztery tysięczne")
+    | ("5" : "pięć tysięcznych")
+    | ("6" : "sześć tysięcznych")
+    | ("7" : "siedem tysięcznych")
+    | ("8" : "osiem tysięcznych")
+    | ("9" : "dziewięć tysięcznych")
+;
+ 
+nascie_dzesietne = nascie dziesiatych;
+nascie_setne = nascie setnych;
+nascie_tysieczne = nascie tysiecznych;
+ 
+ulamki_1_do_9 = jedna_dziesiata
+    | suffix_dziesietne
+;
+ 
+ulamki_01_do_99 = delzero jedna_setna
+    | delzero suffix_setne
+    | nascie_setne
+    | dziesiatki delzero setnych
+    | dziesiatki spacja suffix_setne
+;
+ 
+ulamki_001_do_999 = delzero delzero jedna_tysieczna
+    | delzero delzero suffix_tysieczne
+    | delzero nascie_tysieczne
+    | setki delzero spacja suffix_tysieczne
+    | setki spacja nascie_tysieczne
+    | setki spacja dziesiatki delzero tysiecznych
+    | setki spacja dziesiatki spacja suffix_tysieczne
+;
+ 
+ulamki_all = ulamki_1_do_9
+    | ulamki_01_do_99
+    | ulamki_001_do_999
+;
+ 
+ 
+ 
+ 
+wynik = "[BOS]" zero "[EOS]"
+    | "[BOS]" minus liczby_all "[EOS]"
+    | "[BOS]" minus delzero delprzecinek ulamki_all "[EOS]"
+    | "[BOS]" minus liczby_all i ulamki_all "[EOS]"
+;
+ 
+export PROCESS = CDRewrite[wynik, "", "", allChars*];

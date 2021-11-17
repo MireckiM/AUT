@@ -1,0 +1,8 @@
+TAK abc 0.000
+NIE ab
+NIE abcd
+NIE aaaabc
+NIE aaaaaaaabc
+TAK aaaaaaabc 0.000
+NIE zzz
+TAK aaaaaaabc 0.000
